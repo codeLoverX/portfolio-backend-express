@@ -25,11 +25,12 @@ let connectDB = () => {
       useCreateIndex: true,
       useFindAndModify: false,
     })
+    console.log('Connected to Database') // outputs green text
+
   }
   catch {
     console.log('Failed to connect to Database') // outputs green text
   }
-  console.log('Connected to Database') // outputs green text
 }
 
 

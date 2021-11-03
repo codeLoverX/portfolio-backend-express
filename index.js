@@ -21,6 +21,10 @@ app.use(express.json());
 // for parsing application/xwww-form-urlencoded
 app.use(express.urlencoded({ extended: true })); 
 connectDB();
+app.use("/",  function(req, res, next){
+ 
+  res.json({'success': true})
+});
 app.use("/educations", educationRoutes);
 app.use("/experiences", experienceRoutes);
 app.use("/languages", languageRoutes);
