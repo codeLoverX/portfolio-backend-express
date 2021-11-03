@@ -1,0 +1,30 @@
+[
+    {
+        "type": "React",
+        "level": "80"
+    },
+    {
+        "type": "JavaScript",
+        "level": "95"
+    },
+    {
+        "type": "Express ",
+        "level": "90"
+    },
+    {
+        "type": "MongoDB ",
+        "level": "90"
+    },
+    {
+        "type": "Redux",
+        "level": "80"
+    },
+    {
+        "type": "HTML",
+        "level": "80"
+    },
+    {
+        "type": "CSS",
+        "level": "80"
+    }
+]

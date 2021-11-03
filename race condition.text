@@ -1,0 +1,4 @@
+I mistakenly also thought you couldn't get race conditions in Node.js because it's single threaded nature, 
+but as soon as you use a shared resource outside of node (e.g. a file from the file system) you can get into 
+a race condition. I posted an example of this issue in this question when I was 
+trying to understand this: node.js readfile woes.
