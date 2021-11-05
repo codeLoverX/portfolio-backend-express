@@ -7,13 +7,10 @@ const projetRoutes = require("./routes/ProjectRoutes");
 const skillRoutes = require("./routes/SkillRoutes");
 const userRoutes = require("./routes/UserRoutes");
 const messageRoutes = require("./routes/MessageRoutes");
-const db = require('./db');
-const connectDB= db.connectDB;
-const importData= db.importData;
+const {connectDB, importData} = require('./db');
 require("dotenv").config({ path: __dirname+ "\\env\\config.env" });
 global.basedir = __dirname;
 
-const bodyParser = require("body-parser");
 const app = express();
 app.use(cors());
 // for parsing json
@@ -21,8 +18,7 @@ app.use(express.json());
 // for parsing application/xwww-form-urlencoded
 app.use(express.urlencoded({ extended: true })); 
 connectDB();
-app.use("/",  function(req, res, next){
- 
+app.get("/",  function(req, res, next){
   res.json({'success': true})
 });
 app.use("/educations", educationRoutes);

@@ -2,10 +2,13 @@
 const mongoose = require("mongoose")
 const dotenv = require("dotenv")
 dotenv.config({ path: __dirname + "\\env\\config.env" })
+const path = require('path');
 
 
 // -------------DB SEEDER
 const fs = require('fs');
+const fs_extra = require("fs-extra");
+
 // Load models
 const EducationModel = require('./models/EducationModel')
 const ExperienceModel = require('./models/ExperienceModel')
@@ -42,21 +45,52 @@ let modelNames = [EducationModel, ExperienceModel, LanguageModel, ProjectModel, 
 // store data from JSON files
 let data = []
 for (let k = 0; k < fileNames.length; k++) {
-  let json = JSON.parse(fs.readFileSync(`${__dirname}/uploads/initialData/${fileNames[k]}.json`, 'utf-8'))
+  let json = JSON.parse(fs.readFileSync(`${__dirname}/uploads/templates/${fileNames[k]}.json`, 'utf-8'))
   json.map((object) => {
 
-    Object.keys(object).forEach((key) => 
-    {
-      if ((['startDate', 'endDate'].includes(key))){
-        console.log({key: new Date(object[key])})
+    Object.keys(object).forEach((key) => {
+      if ((['startDate', 'endDate'].includes(key))) {
+        console.log({ key: new Date(object[key]) })
         object[key] = new Date(object[key])
-      }}
+      }
+    }
     );
-      // console.log({ object })
+    // console.log({ object })
   })
   data.push((json))
 }
 
+// delete files
+
+function deleteFiles() {
+
+  const directory = 'uploads/projects';
+
+  fs.readdir(directory, (err, files) => {
+    if (err) throw err;
+
+    for (const file of files) {
+      fs.unlink(path.join(directory, file), err => {
+        if (err) throw err;
+      });
+    }
+  });
+
+}
+
+function copyFiles() {
+  var source = 'uploads/templates'
+  var destination = 'uploads/projects'
+
+  // Copy the source folder to the destination
+  fs_extra.copy(source, destination, function (err) {
+    if (err) {
+      console.log('An error occurred while copying the folder.')
+      return console.error(err)
+    }
+    console.log('Copy completed!')
+  });
+}
 
 // Import into DB
 const importData = async () => {
@@ -66,6 +100,8 @@ const importData = async () => {
     // xxxxxxxxxxxxxxxxxxxxxx
     // RACE CONDITIONS
     // inside same function, let one async operation occur. then do the second one.
+    await deleteFiles()
+    await copyFiles()
     await deleteData()
     for (let i = 0; i < modelNames.length; i++) {
       await modelNames[i].create(data[i])
@@ -76,6 +112,8 @@ const importData = async () => {
     console.error(err);
   }
 };
+
+
 // Delete data
 const deleteData = async () => {
   try {
