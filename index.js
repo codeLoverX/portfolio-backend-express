@@ -12,12 +12,14 @@ require("dotenv").config({ path: __dirname+ "\\env\\config.env" });
 global.basedir = __dirname;
 
 const app = express();
-app.use(cors());
 // for parsing json
 app.use(express.json());
 // for parsing application/xwww-form-urlencoded
 app.use(express.urlencoded({ extended: true })); 
 connectDB();
+// header should be put here?
+app.use(cors());
+
 app.get("/",  function(req, res, next){
   res.json({'success': true})
 });
