@@ -26,7 +26,7 @@ const languageSchema = {
 const projectSchema = {
     A: 'title',
     B: 'description',
-    C: 'technologiesty',
+    C: 'technologies',
     D: 'haveLink',
     E: 'link',
     F: 'projectImage'
