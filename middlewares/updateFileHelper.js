@@ -65,7 +65,7 @@ const updateFileHelper = async (req, res, next) => {
     if (file) {
         try {
             const result = excelToJson({
-                source: fs.readFileSync(`${basedir}\\uploads\\projects\\${file.filename}`),
+                source: fs.readFileSync(`${basedir}/uploads/projects/${file.filename}`),
                 // fs.readFileSync return a Buffer
                 sheets: [{ name: 'Sheet1', header: { rows: 1 }, columnToKey: { ...schema } }]
             });
