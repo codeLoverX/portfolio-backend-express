@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true })); 
 connectDB();
 // header should be put here?
-app.use(cors({credentials: true}));
+app.use(cors());
 
 app.get("/",  function(req, res, next){
   res.json({'success': true})
