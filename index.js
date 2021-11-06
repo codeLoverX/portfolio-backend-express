@@ -17,8 +17,8 @@ app.use(express.json());
 // for parsing application/xwww-form-urlencoded
 app.use(express.urlencoded({ extended: true })); 
 connectDB();
-// header should be put here?
-app.use(cors());
+// if axios mention it
+app.use(cors({origin: 'http://localhost:3000'}));
 
 app.get("/",  function(req, res, next){
   res.json({'success': true})
