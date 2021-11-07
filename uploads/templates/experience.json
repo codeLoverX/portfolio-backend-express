@@ -5,8 +5,7 @@
         "city": "Johor Bahru, Malaysia",
         "startDate": "2021-01-01",
         "endDate": "2023-10-24",
-        "description": "I work under my supervisor, Dr Johanna Ahmed, in our research of improving process of test case prioritization.",
-        "technologies": "-"
+        "description": "Supervisor: Dr Johanna Ahmed. Field: Test Case Prioritization (TCP)."
     },
     {
         "title": "Head of Technological Department",
@@ -14,7 +13,6 @@
         "city": "Johor Bahru, Malaysia",
         "startDate": "2021-07-01",
         "endDate": "2023-10-24",
-        "description": "I organize all online and offline meetings and livestreams of the club.",
-        "technologies": "-"
+        "description": "Organize all online and offline meetings of the club."
     }
 ]

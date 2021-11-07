@@ -20,11 +20,11 @@
         "level": "80"
     },
     {
-        "type": "HTML",
+        "type": "Dart/Flutter",
         "level": "80"
     },
     {
-        "type": "CSS",
+        "type": "HTML/CSS",
         "level": "80"
     }
 ]
