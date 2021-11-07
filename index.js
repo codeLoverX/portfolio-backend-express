@@ -2,7 +2,6 @@ const express = require("express");
 const cors = require("cors");
 const educationRoutes = require("./routes/EducationRoutes");
 const experienceRoutes = require("./routes/ExperienceRoutes");
-const languageRoutes = require("./routes/LanguageRoutes");
 const projetRoutes = require("./routes/ProjectRoutes");
 const skillRoutes = require("./routes/SkillRoutes");
 const userRoutes = require("./routes/UserRoutes");
@@ -25,7 +24,6 @@ app.get("/",  function(req, res, next){
 });
 app.use("/educations", educationRoutes);
 app.use("/experiences", experienceRoutes);
-app.use("/languages", languageRoutes);
 app.use("/projects", projetRoutes);
 app.use("/skills", skillRoutes);
 app.use("/users", userRoutes);

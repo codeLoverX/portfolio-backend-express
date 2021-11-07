@@ -13,7 +13,6 @@ const fs_extra = require("fs-extra");
 // Load models
 const EducationModel = require('./models/EducationModel')
 const ExperienceModel = require('./models/ExperienceModel')
-const LanguageModel = require('./models/LanguageModel')
 const ProjectModel = require('./models/ProjectModel')
 const UserModel = require('./models/UserModel')
 const SkillsModel = require('./models/SkillsModel')
@@ -40,9 +39,9 @@ let connectDB = () => {
 
 // -------------DB SEEDER
 // store fileNames
-let fileNames = ['education', 'experience', 'language', 'project', 'skill',]
+let fileNames = ['education', 'experience', , 'project', 'skill',]
 // store modelNames
-let modelNames = [EducationModel, ExperienceModel, LanguageModel, ProjectModel, SkillsModel]
+let modelNames = [EducationModel, ExperienceModel, ProjectModel, SkillsModel]
 // store data from JSON files
 let data = []
 for (let k = 0; k < fileNames.length; k++) {

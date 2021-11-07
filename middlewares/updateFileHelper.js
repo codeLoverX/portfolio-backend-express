@@ -3,7 +3,6 @@ const excelToJson = require('convert-excel-to-json');
 // model
 const EducationModel = require('../models/EducationModel')
 const ExperienceModel = require('../models/ExperienceModel')
-const LanguageModel = require('../models/LanguageModel')
 const ProjectModel = require('../models/ProjectModel')
 const SkillsModel = require('../models/SkillsModel')
 // schema
@@ -11,7 +10,7 @@ const schemaAll = require("../helper/excelFileConversion")
 
 // store modelNames
 let modelsAll = {
-    education: EducationModel, experience: ExperienceModel, language: LanguageModel,
+    education: EducationModel, experience: ExperienceModel,
     project: ProjectModel, skill: SkillsModel
 }
 
@@ -36,12 +35,6 @@ const updateFileHelper = async (req, res, next) => {
         case "experiences": {
             model = modelsAll.experience;
             schema = schemaAll.experienceSchema;
-            file = req.file;
-            break;
-        }
-        case "language": {
-            model = modelsAll.language;
-            schema = schemaAll.languageSchema;
             file = req.file;
             break;
         }
