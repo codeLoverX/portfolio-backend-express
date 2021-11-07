@@ -63,13 +63,7 @@ for (let k = 0; k < fileNames.length; k++) {
 
 /* create users
 */
-let json = JSON.parse(fs.readFileSync(`${__dirname}/uploads/templates/user.json`, 'utf-8'))
-json.map((object) => {
-  bcrypt.hash(object.password, 10, async (err, hash) => {
-    await UserModel.create({ name: object.name, email: object.email, password: hash })
-    // console.log({ object })
-  })
-})
+
 
 // delete files
 
@@ -118,6 +112,13 @@ const importData = async () => {
     for (let i = 0; i < modelNames.length; i++) {
       await modelNames[i].create(data[i])
     }
+    let json = JSON.parse(fs.readFileSync(`${__dirname}/uploads/templates/user.json`, 'utf-8'))
+    json.map((object) => {
+      bcrypt.hash(object.password, 10, async (err, hash) => {
+        await UserModel.create({ name: object.name, email: object.email, password: hash })
+        // console.log({ object })
+      })
+    })
     console.log('Data Imported...')
     // process.exit();
   } catch (err) {
