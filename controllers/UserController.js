@@ -43,13 +43,13 @@ const login = async (req, res, next) => {
     const user = await User.find({ email: req.body.email });
     if (user.length < 1) {
       return res.status(401).json({
-        message: "Auth failed",
+        message: "Email failed",
       });
     }
     bcrypt.compare(req.body.password, user[0].password, (err, result) => {
       if (err) {
         return res.status(401).json({
-          message: "Auth failed",
+          message: "Password failed",
         });
       }
       if (result) {

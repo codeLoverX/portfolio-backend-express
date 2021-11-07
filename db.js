@@ -39,9 +39,9 @@ let connectDB = () => {
 
 // -------------DB SEEDER
 // store fileNames
-let fileNames = ['education', 'experience', 'language', 'project', 'skill', 'user']
+let fileNames = ['education', 'experience', 'language', 'project', 'skill',]
 // store modelNames
-let modelNames = [EducationModel, ExperienceModel, LanguageModel, ProjectModel, SkillsModel, UserModel]
+let modelNames = [EducationModel, ExperienceModel, LanguageModel, ProjectModel, SkillsModel]
 // store data from JSON files
 let data = []
 for (let k = 0; k < fileNames.length; k++) {
@@ -59,6 +59,16 @@ for (let k = 0; k < fileNames.length; k++) {
   })
   data.push((json))
 }
+
+/* create users
+*/
+let json = JSON.parse(fs.readFileSync(`${__dirname}/uploads/templates/user.json`, 'utf-8'))
+json.map((object) => {
+  bcrypt.hash(object.password, 10, async (err, hash) => {
+    await UserModel.create({ name: object.name, email: object.email, password: hash })
+    // console.log({ object })
+  })
+})
 
 // delete files
 
