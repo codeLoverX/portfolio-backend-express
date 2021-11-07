@@ -13,7 +13,7 @@ global.basedir = __dirname;
 
 const app = express();
 // for parsing json
-app.use(express.json());
+app.use(express.json({extended: true }));
 // for parsing application/xwww-form-urlencoded
 app.use(express.urlencoded({ extended: true })); 
 connectDB();
