@@ -41,18 +41,27 @@ const signup = async (req, res, next) => {
 const login = async (req, res, next) => {
   try {
     const user = await User.find({ email: req.body.email });
+    console.log("Found user")
+    console.log({ user })
     if (user.length < 1) {
+      console.log("User length < 1")
+      console.log({ user })
       return res.status(401).json({
         message: "Email failed",
       });
     }
     bcrypt.compare(req.body.password, user[0].password, (err, result) => {
       if (err) {
+
+        console.log("Password err")
+        console.log({ err })
         return res.status(401).json({
           message: "Password failed",
         });
       }
       if (result) {
+        console.log("matched password")
+        console.log({result})
         const token = jwt.sign(
           {
             email: user[0].email,
@@ -63,6 +72,7 @@ const login = async (req, res, next) => {
             expiresIn: "1h",
           } */
         );
+        console.log({token})
         return res.status(200).json({
           message: "Auth successful",
           token: token,
@@ -73,13 +83,15 @@ const login = async (req, res, next) => {
       });
     });
   } catch (error) {
+    console.log("Didn't find user")
+
     res.status(500).json({ error: err });
   }
 };
 
 const getUsers = async (req, res, next) => {
   try {
-    const user = await User.find({ });
+    const user = await User.find({});
     res.status(200).json({ user });
   } catch (error) {
     res.status(500).json({ error: err });
