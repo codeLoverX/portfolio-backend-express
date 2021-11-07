@@ -5,7 +5,7 @@
         "technologies": "React, Redux, Node (ExpressJS), MongoDB, MDBootstrap",
         "haveLink": "TRUE",
         "link": "https://funprojects.netlify.app/ecommerce",
-        "projectImage": "ecommerce-first-view.png"
+        "projectImage": "ecommerce-first-view.PNG"
     },
     {
         "title": "Umie Ju Corner Booking System",
@@ -13,7 +13,7 @@
         "technologies": "Flutter, Context, Firebase",
         "haveLink": "TRUE",
         "link": "https://github.com/codeLoverX/react-university-schedule",
-        "projectImage": "flutter-first-view.png"
+        "projectImage": "flutter-first-view.PNG"
     },
     {
         "title": "Faceblog",
@@ -21,7 +21,7 @@
         "technologies": "React, Redux, Node (ExpressJS), MongoDB, MaterialUI",
         "haveLink": "TRUE",
         "link": "https://funprojects.netlify.app/faceblog",
-        "projectImage": "faceblog-first-view.png"
+        "projectImage": "faceblog-first-view.PNG"
     },
     {
         "title": "My First Portfolio",
@@ -29,7 +29,7 @@
         "technologies": "React, Node (ExpressJS), ExcelToJson(Input Excel) NodeMailer(mail), MongoDB, Bootstrap, Redux, ",
         "haveLink": "TRUE",
         "link": "https://funprojects.netlify.app/portfolio",
-        "projectImage": "portfolio-first-view.png"
+        "projectImage": "portfolio-first-view.PNG"
     },
     {
         "title": "Events & Reservations",
@@ -37,7 +37,7 @@
         "technologies": "Node (ExpressJS), PostgresSQL, Handlebars",
         "haveLink": "TRUE",
         "link": "https://funprojects.netlify.app/events",
-        "projectImage": "events-first-view.png"
+        "projectImage": "events-first-view.PNG"
     },
     {
         "title": "Movie Reviews",
@@ -45,7 +45,7 @@
         "technologies": "Node (ExpressJS), MongoDB, Handlebars",
         "haveLink": "TRUE",
         "link": "https://funprojects.netlify.app/review",
-        "projectImage": "reviews-first-view.png"
+        "projectImage": "reviews-first-view.PNG"
     },
     {
         "title": "UTM School of Computing Admin Website",
@@ -53,6 +53,6 @@
         "technologies": "React, Redux Toolkit, MaterialUI",
         "haveLink": "TRUE",
         "link": "https://github.com/codeLoverX/umi-ju-restaurant-flutter",
-        "projectImage": "iconic-four-schedule.png"
+        "projectImage": "iconic-four-schedule.PNG"
     }
 ]
