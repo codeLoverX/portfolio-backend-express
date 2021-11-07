@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const bodyParser = require("body-parser");
 const educationRoutes = require("./routes/EducationRoutes");
 const experienceRoutes = require("./routes/ExperienceRoutes");
 const languageRoutes = require("./routes/LanguageRoutes");
@@ -13,9 +14,9 @@ global.basedir = __dirname;
 
 const app = express();
 // for parsing json
-app.use(express.json());
+app.use(bodyParser.json());
 // for parsing application/xwww-form-urlencoded
-app.use(express.urlencoded({ extended: true })); 
+app.use(bodyParser.urlencoded({ extended: true })); 
 connectDB();
 // if axios mention it
 app.use(cors({origin: 'http://localhost:3000'}));
