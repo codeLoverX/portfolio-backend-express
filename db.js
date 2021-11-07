@@ -114,7 +114,7 @@ const importData = async () => {
     await deleteFiles()
     await copyFiles()
     await deleteData()
-    await UserModel.createMany();
+    await UserModel.deleteMany();
     for (let i = 0; i < modelNames.length; i++) {
       await modelNames[i].create(data[i])
     }
