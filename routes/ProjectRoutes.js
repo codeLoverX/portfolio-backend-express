@@ -9,7 +9,8 @@ const router = Router();
 router.get("/", ProjectController.getAllProjects);
 // --- updateMessage
 router.get("/updateProjects/excelFile", ProjectController.sendProject, sendFileHelper);
-router.post("/updateProjects/",  multer.fields([{name:'excelFile'}, {name: 'imageFile'}]), ProjectController.updateProject, updateFileHelper);
+// router.post("/updateProjects/",  multer.fields([{name:'excelFile'}, {name: 'imageFile'}]), ProjectController.updateProject, updateFileHelper);
+router.post("/updateProjects/",  multer.any(), ProjectController.updateProject, updateFileHelper);
 
 
 module.exports = router;
