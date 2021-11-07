@@ -48,7 +48,7 @@ const updateFileHelper = async (req, res, next) => {
         case "projects": {
             model = modelsAll.project;
             schema = schemaAll.projectSchema;
-            file= req.files.excelFile[0]
+            file= req.file
             // should always visualize request weeeeellllllllll!!!!!!!!!!!!
             console.log({ file, body: req.body, files: req.files })
             break;
