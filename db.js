@@ -39,7 +39,7 @@ let connectDB = () => {
 
 // -------------DB SEEDER
 // store fileNames
-let fileNames = ['education', 'experience', , 'project', 'skill',]
+let fileNames = ['education', 'experience',  'project', 'skill',]
 // store modelNames
 let modelNames = [EducationModel, ExperienceModel, ProjectModel, SkillsModel]
 // store data from JSON files
