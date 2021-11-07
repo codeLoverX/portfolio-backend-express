@@ -50,7 +50,6 @@ for (let k = 0; k < fileNames.length; k++) {
 
     Object.keys(object).forEach((key) => {
       if ((['startDate', 'endDate'].includes(key))) {
-        console.log({ key: new Date(object[key]) })
         object[key] = new Date(object[key])
       }
     }

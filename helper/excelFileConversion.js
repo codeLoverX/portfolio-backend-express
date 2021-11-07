@@ -18,11 +18,6 @@ const experienceSchema = {
     G: 'technologies'
 }
 
-const languageSchema = {
-    A: 'name',
-    B: 'level'
-}
-
 const projectSchema = {
     A: 'title',
     B: 'description',
@@ -51,6 +46,5 @@ module.exports = {
     experienceSchema,
     skillsSchema, 
     projectSchema,
-    languageSchema,
     messageSchema
 }
