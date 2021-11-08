@@ -4,7 +4,7 @@
         "description": "Solo fun project",
         "technologies": "React, Redux, Node (ExpressJS), MongoDB, MDBootstrap",
         "haveLink": "TRUE",
-        "link": "https://funprojects.netlify.app/ecommerce",
+        "link": "https://funprojects.netlify.app",
         "projectImage": "ecommerce-first-view.PNG"
     },
     {
@@ -20,7 +20,7 @@
         "description": "Solo fun project",
         "technologies": "React, Redux, Node (ExpressJS), MongoDB, MaterialUI",
         "haveLink": "TRUE",
-        "link": "https://funprojects.netlify.app/faceblog",
+        "link": "https://funprojects.netlify.app",
         "projectImage": "faceblog-first-view.PNG"
     },
     {
@@ -28,7 +28,7 @@
         "description": "Solo fun project",
         "technologies": "React, Node (ExpressJS), ExcelToJson(Input Excel) NodeMailer(mail), MongoDB, Bootstrap, Redux, ",
         "haveLink": "TRUE",
-        "link": "https://funprojects.netlify.app/portfolio",
+        "link": "https://funprojects.netlify.app",
         "projectImage": "portfolio-first-view.PNG"
     },
     {
@@ -36,7 +36,7 @@
         "description": "Solo fun project",
         "technologies": "Node (ExpressJS), PostgresSQL, Handlebars",
         "haveLink": "TRUE",
-        "link": "https://funprojects.netlify.app/events",
+        "link": "https://funprojects.netlify.app",
         "projectImage": "events-first-view.PNG"
     },
     {
@@ -44,7 +44,7 @@
         "description": "Solo fun project",
         "technologies": "Node (ExpressJS), MongoDB, Handlebars",
         "haveLink": "TRUE",
-        "link": "https://funprojects.netlify.app/review",
+        "link": "https://funprojects.netlify.app",
         "projectImage": "reviews-first-view.PNG"
     },
     {
