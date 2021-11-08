@@ -17,7 +17,7 @@ app.use(express.json({extended: true }));
 app.use(express.urlencoded({ extended: true })); 
 connectDB();
 // if axios mention it
-app.use(cors({origin: 'http://localhost:3000'}));
+app.use(cors({origin: 'https://ridwanbinmonjurv1.netlify.app'}));
 
 app.get("/",  function(req, res, next){
   res.json({'success': true})
